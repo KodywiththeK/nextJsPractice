@@ -1,9 +1,9 @@
 import './globals.css'
-import { Open_Sans } from 'next/font/google'
-import { Nanum_Gothic } from 'next/font/google'
 import styles from './layout.module.css'
 import Link from 'next/link'
 import { Metadata } from 'next'
+import { Open_Sans } from 'next/font/google'
+import { Nanum_Gothic } from 'next/font/google'
 
 // 폰트
 const sans = Open_Sans({ subsets: ['latin'] })

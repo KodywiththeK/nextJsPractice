@@ -1,7 +1,8 @@
-import { getProduct, getProducts } from '@/app/service/products'
-import { notFound } from 'next/navigation'
+import { getProduct, getProducts } from '@/service/products'
+import { notFound, redirect } from 'next/navigation'
 import React from 'react'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
+import GoComponentButton from '@/components/GoComponentButton'
 
 export const revalidate = 3
 
@@ -20,13 +21,15 @@ export function generateMetadata({ params }: PantsPageProps) {
 export default async function ProductPage({ params: { slug } }: PantsPageProps) {
   const product = await getProduct(slug)
   if (!product) {
-    notFound()
+    redirect('/products')
+    // notFound()
   }
   // 서버 파일에 있는 데이터중 해당 제품의 정보를 찾아서 그걸 보여줌
   return (
     <>
-      <div>{product.name} 제품 설명페이지</div>
+      <div>{product?.name} 제품 설명페이지</div>
       <Image src={`/images/${product.image}`} alt={product.name} width={300} height={300} />
+      <GoComponentButton />
     </>
   )
 }

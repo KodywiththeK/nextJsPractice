@@ -1,9 +1,10 @@
 import MeowArticle from '../../components/MeowArticle'
 import Link from 'next/link'
 import React from 'react'
-import { getProducts, Product } from '../service/products'
+
 import clothesImage from '../../../public/images/clothes.jpeg'
 import Image from 'next/image'
+import { getProducts, Product } from '@/service/products'
 
 // export const revalidate = 3
 

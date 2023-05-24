@@ -8,7 +8,7 @@ export default function layout({
   return (
     <section>
       {/* Include shared UI here e.g. a header or sidebar */}
-      <nav>LAYOUT</nav>
+      <nav>About Me</nav>
       {children}
     </section>
   )
