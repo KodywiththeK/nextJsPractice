@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <>
-      <h1>Home Page</h1>
+      <h1>Home Page v.2</h1>
       <Counter />
       <Image src="https://images.unsplash.com/photo-1441986300917-64674bd600d8" alt="#" width={400} height={400} />
     </>
