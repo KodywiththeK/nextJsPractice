@@ -16,7 +16,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <header className={styles.header}>
-          <h1>Demo Note</h1>
+          <h1>
+            <Link href="/">Demo Note</Link>
+          </h1>
           <nav className={styles.nav}>
             <Link href="/contact">Contact</Link>
             <Link href="/about">About</Link>

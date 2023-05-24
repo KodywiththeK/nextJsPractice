@@ -1,7 +1,8 @@
 import { getProduct, getProducts } from '@/app/service/products'
 import { notFound } from 'next/navigation'
-import { Props } from 'next/script'
 import React from 'react'
+
+export const revalidate = 3
 
 type PantsPageProps = {
   params: {
