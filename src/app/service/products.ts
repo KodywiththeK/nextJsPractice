@@ -5,10 +5,12 @@ export type Product = {
   id: string
   name: string
   price: number
+  image: string
 }
 
 // 모든 제품 받아오기
 export async function getProducts(): Promise<Product[]> {
+  // for (let i = 0; i < 1000000000; i++) {}
   const filePath = path.join(process.cwd(), 'data', 'products.json')
   const data = await fs.readFile(filePath, 'utf-8')
   return JSON.parse(data)

@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function ProductsLoading() {
-  return <div>loading...</div>
+  return <p>로딩중 입니다...</p>
 }
